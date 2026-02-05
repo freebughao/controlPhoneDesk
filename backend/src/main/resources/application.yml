@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:sqlite:./data/app.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    open-in-view: false
+
+app:
+  adb:
+    bin: adb
+  scrcpy:
+    serverVersion: "1.19-ws5"
+    serverPort: 8886
+    logLevel: "ERROR"
+    serverPackage: "com.genymobile.scrcpy.Server"
+    serverJarPath: "scrcpy/scrcpy-server.jar"
+  cors:
+    allowedOrigins:
+      - "http://localhost:5173"
+      - "http://127.0.0.1:5173"
+      - "http://localhost:3000"
+      - "http://127.0.0.1:3000"
+    allowedOriginPatterns:
+      - "http://localhost:*"
+      - "http://127.0.0.1:*"
+      - "http://192.168.*.*:*"
+  security:
+    jwt:
+      secret: "change-me-in-production"
+      expirationMinutes: 720

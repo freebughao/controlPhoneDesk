@@ -1,0 +1,150 @@
+:root {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #1f2937;
+  background: #f5f6f7;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f5f6f7;
+}
+
+#root {
+  height: 100vh;
+}
+
+.admin-layout {
+  height: 100vh;
+}
+
+.logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.admin-header {
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.admin-user {
+  cursor: pointer;
+  color: #111827;
+}
+
+.admin-content {
+  margin: 16px;
+  background: #fff;
+  padding: 16px;
+  min-height: calc(100vh - 96px);
+  border-radius: 8px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.group-detail {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.group-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2f5;
+}
+
+.login-card {
+  width: 360px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.multi-stream-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.multi-stream-item {
+  background: #0b1220;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.stream-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.stream-container {
+  position: relative;
+  display: inline-block;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-layer {
+  position: absolute;
+  z-index: 0;
+}
+
+.touch-layer {
+  position: absolute;
+  z-index: 1;
+}
+
+.stream-container canvas,
+.stream-container video {
+  display: block;
+}
+
+.stream-placeholder {
+  color: #9aa4b2;
+}
+
+.status {
+  font-size: 12px;
+  color: #9aa4b2;
+}
